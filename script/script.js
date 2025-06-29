@@ -44,11 +44,16 @@
         // Portfolio Filtering
         const filterBtns = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
-
+        
+        const activeDiv = document.querySelector('.isActive');
+        activeDiv.style.display = 'none';
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 // Remove active class from all buttons
-                filterBtns.forEach(btn => btn.classList.remove('active'));
+                filterBtns.forEach(btn =>{ btn.classList.remove('active');
+                activeDiv.style.display = 'grid';
+  
+                });
                 // Add active class to clicked button
                 btn.classList.add('active');
                 
@@ -63,6 +68,7 @@
                 });
             });
         });
+        
 
         // FAQ Accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
@@ -167,3 +173,31 @@
 
         // Check on scroll
         window.addEventListener('scroll', animateOnScroll);
+
+        // Mobile dropdown functionality
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992) {
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            dropdown.classList.toggle('active');
+            
+            // Close other dropdowns
+            document.querySelectorAll('.dropdown').forEach(item => {
+                if (item !== dropdown) {
+                    item.classList.remove('active');
+                }
+            });
+        }
+    });
+});
+
+// Close dropdowns when clicking elsewhere
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown') && window.innerWidth <= 992) {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    }
+});
+

@@ -11,34 +11,41 @@
 </head>
 <body>
     <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <nav>
-                <div class="logo">
+       <header id="header">
+    <div class="container">
+        <nav>
+            <div class="logo">
                 <img src="images/logo.jpeg" alt="logo">
 
-                </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="fiberglass-pools.html">Fiberglass Pool Installation</a></li>
+                        <li><a href="revamps.html">Pool Revamps</a></li>
+                        <li><a href="farm-dam-conversion.html">Farm Dam Conversion</a></li>
+                        <li><a href="pool-regrouting.html">Pool Regrouting</a></li>
+                    </ul>
+                </li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content" id="heroContent">
-                <h1>Designer Pools, Unmatched Quality</h1>
-                <p>Custom-built pools with luxury, quality, and craftsmanship</p>
+                <h1>All-In-One Pool Perfection</h1>
+                <p>Design, Installation, Paving, Heating & Covers by Local experts</p>
                  <a href="https://wa.me/27635024075" class="whatsapp-btn pulse">
                     <i class="fab fa-whatsapp"></i> Get a Free Quote
                 </a>           
@@ -108,28 +115,35 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="animate">Our Services</h2>
-            <div class="services-container">
-              <div class="service-card animate" style="animation-delay: 0.2s;">
+   <section class="services" id="services">
+    <div class="container">
+        <h2 class="animate">Our Services</h2>
+        <div class="services-container">
+            <!-- Fiberglass Pool Installation -->
+            <div class="service-card animate" style="animation-delay: 0.2s;">
                 <div class="service-icon">
                     <i class="fas fa-swimming-pool"></i>
                 </div>
                 <div class="service-content">
                     <h3>Fiberglass Pool Installation</h3>
                     <p>As accredited installers for Pools for Africa, we provide top-quality fiberglass pool installations that are durable, beautiful, and low-maintenance.</p>
+                    <a href="fiberglass-pools.html" class="service-view-more">View Gallery →</a>
                 </div>
             </div>
+            
+            <!-- Swimming Pool Revamps -->
             <div class="service-card animate" style="animation-delay: 0.4s;">
                 <div class="service-icon">
                     <i class="fas fa-tools"></i>
                 </div>
                 <div class="service-content">
-                    <h3>Swimming Pool Revamps</h3>
+                    <h3>Pool Revamps</h3>
                     <p>Give your old pool a new lease on life with our complete renovation services, from retiling to equipment upgrades.</p>
+                    <a href="revamps.html" class="service-view-more">View Gallery →</a>
                 </div>
             </div>
+            
+            <!-- Pumps and Filters -->
             <div class="service-card animate" style="animation-delay: 0.6s;">
                 <div class="service-icon">
                     <i class="fas fa-filter"></i>
@@ -139,6 +153,8 @@
                     <p>Expert installation, repair, and maintenance of all pool filtration systems to keep your water crystal clear.</p>
                 </div>
             </div>
+            
+            <!-- Farm Dam Conversion -->
             <div class="service-card animate" style="animation-delay: 0.8s;">
                 <div class="service-icon">
                     <i class="fas fa-tractor"></i>
@@ -146,110 +162,264 @@
                 <div class="service-content">
                     <h3>Farm Dam Conversion</h3>
                     <p>Transform your farm dam into a beautiful, fully functional swimming pool with our specialized conversion services.</p>
+                    <a href="farm-dam-conversion.html" class="service-view-more">View Gallery →</a>
                 </div>
             </div>
+            
+            <!-- Swimming Pool Regrout -->
             <div class="service-card animate" style="animation-delay: 1.0s;">
                 <div class="service-icon">
                     <i class="fas fa-border-style"></i>
                 </div>
                 <div class="service-content">
-                    <h3>Swimming Pool Regrout</h3>
+                    <h3>Pool Regrout</h3>
                     <p>Professional regrouting services to restore the beauty and integrity of your pool tiles.</p>
-                </div>
-            </div>
-            </div>
-            
-            <div class="other-services animate" style="animation-delay: 1.2s;">
-                <h3 class="text-center">Other Services We Offer</h3>
-                <div class="other-services-list">
-                    <div class="other-service-item">Paving</div>
-                    <div class="other-service-item">Heating Systems</div>
-                    <div class="other-service-item">Plumbing</div>
-                    <div class="other-service-item">Pool Maintenance</div>
-                    <div class="other-service-item">Water Treatment</div>
+                    <a href="pool-regrouting.html" class="service-view-more">View Gallery →</a>
                 </div>
             </div>
         </div>
-        <div class="section-cta animate" style="animation-delay: 1.4s;">
-    <a href="#contact" class="btn btn-cta pulse">Discuss Your Pool Needs</a>
-   </div>
-    </section>
+        
+        <div class="other-services animate" style="animation-delay: 1.2s;">
+            <h3 class="text-center">Other Services We Offer</h3>
+            <div class="other-services-list">
+                <div class="other-service-item">Paving</div>
+                <div class="other-service-item">Heating Systems</div>
+                <div class="other-service-item">Plumbing</div>
+                <div class="other-service-item">Pool Maintenance</div>
+                <div class="other-service-item">Water Treatment</div>
+            </div>
+        </div>
+    </div>
+    <div class="section-cta animate" style="animation-delay: 1.4s;">
+        <a href="#contact" class="btn btn-cta pulse">Discuss Your Pool Needs</a>
+    </div>
+</section>
 
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="animate">Our Portfolio</h2>
             <div class="portfolio-filters animate" style="animation-delay: 0.2s;">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="installation">Pool Installation</button>
                 <button class="filter-btn" data-filter="revamps">Pool Revamps</button>
                 <button class="filter-btn" data-filter="solar">Solar Heating</button>
                 <button class="filter-btn" data-filter="farm">Farm Dam Conversion</button>
+                <button class="filter-btn" data-filter="regrout">pool regrout</button>
+
             </div>
-            <div class="portfolio-grid animate" style="animation-delay: 0.4s;">
+            <div class="portfolio-grid animate isActive" style="animation-delay: 0.4s;">
                 <div class="portfolio-item" data-category="installation">
-                    <img src="images/poolinstallation (1).jpeg" alt="Pool Installation Project 1">
+                    <img src="images/installation1.jpeg" alt="Pool Installation Project 1">
                     <div class="portfolio-overlay">
-                        <h3>Modern Fiberglass Pool</h3>
-                        <p>Cradock Residential Project</p>
+                        <h3>Pool Installation</h3>
+                         <p>Before</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="installation">
-                    <img src="images/poolinstallation (2).jpeg" alt="Pool Installation Project 2">
+                  <div class="portfolio-item" data-category="installation">
+                    <img src="images/installation2.jpeg" alt="Pool Installation Project 1">
                     <div class="portfolio-overlay">
-                        <h3>Family Pool with Deck</h3>
-                        <p>Graaff-Reinet Home</p>
+                        <h3>Pool Installation</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                 <div class="portfolio-item" data-category="installation">
+                    <img src="images/installation3.jpeg" alt="Pool Installation Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Installation</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+              <div class="portfolio-item" data-category="installation">
+                    <img src="images/installation4.jpeg" alt="Pool Installation Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Installation</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                 <div class="portfolio-item" data-category="installation">
+                    <img src="images/installation5.jpeg" alt="Pool Installation Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Installation</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                 <div class="portfolio-item" data-category="installation">
+                    <img src="images/installation6.jpeg" alt="Pool Installation Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Installation</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                 <div class="portfolio-item" data-category="installation">
+                    <img src="images/installation7.jpeg" alt="Pool Installation Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Installation</h3>
+                        <p>After</p>
+                    </div>
+                </div>
+                 <div class="portfolio-item" data-category="installation">
+                    <img src="images/installation8.jpeg" alt="Pool Installation Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Installation</h3>
+                        <p>After</p>
+                    </div>
+                </div>
+                 <div class="portfolio-item" data-category="installation">
+                    <img src="images/installation9.jpeg" alt="Pool Installation Project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Installation</h3>
+                        <p>After</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="revamps">
-                    <img src="images/poolrevamp (1).jpeg" alt="Pool Installation Project 3">
+                    <img src="images/revamps (1).jpeg" alt="Pool Revamp">
                     <div class="portfolio-overlay">
-                        <h3>Complete Pool Renovation</h3>
-                        <p>Historic Cradock Property</p>
+                        <h3>Pool Revamp</h3>
+                        <p>Before</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="revamps">
-                    <img src="images/poolrevamp (2).jpeg" alt="Pool Revamp Project 2">
+                    <img src="images/revamps (2).jpeg" alt="Pool Revamp">
                     <div class="portfolio-overlay">
-                        <h3>Tile & Coping Replacement</h3>
-                        <p>Commercial Hotel Pool</p>
+                        <h3>Pool Revamp</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="revamps">
+                    <img src="images/revamps (3).jpeg" alt="Pool Revamp">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Revamp</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+               <div class="portfolio-item" data-category="revamps">
+                    <img src="images/revamps (4).jpeg" alt="Pool Revamp">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Revamp</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="revamps">
+                    <img src="images/revamps (5).jpeg" alt="Pool Revamp">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Revamp</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="revamps">
+                    <img src="images/revamps (6).jpeg" alt="Pool Revamp">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Revamp</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="revamps">
+                    <img src="images/revamps (7).jpeg" alt="Pool Revamp">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Revamp</h3>
+                        <p>After</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="revamps">
+                    <img src="images/revamps (7).jpeg" alt="Pool Revamp">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Revamp</h3>
+                        <p>After</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="revamps">
+                    <img src="images/revamps (7).jpeg" alt="Pool Revamp">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Revamp</h3>
+                        <p>After</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="solar">
                     <img src="images/solarheating (1).jpeg" alt="Pool Installation Project 1">
                     <div class="portfolio-overlay">
-                        <h3>Solar Heating System</h3>
-                        <p>Year-Round Swimming</p>
+                        <h3>Solar Heating</h3>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="solar">
                     <img src="images/solarheating (2).jpeg" alt="Solar Heating Project 2">
                     <div class="portfolio-overlay">
-                        <h3>Eco-Friendly Heating</h3>
-                        <p>Energy Efficient Solution</p>
+                        <h3>Solar Heating</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="solar">
+                    <img src="images/solarheating (3).jpeg" alt="Solar Heating Project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Solar Heating</h3>
+                        
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="solar">
+                    <img src="images/solarheating (4).jpeg" alt="Solar Heating Project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Solar Heating</h3>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="farm">
-                    <img src="images/farmdamconversion (1).jpeg" alt="Farm Dam Conversion 1">
+                    <img src="images/farmdamconversion 1.jpeg" alt="Farm Dam Conversion ">
                     <div class="portfolio-overlay">
-                        <h3>Farm Dam Transformation</h3>
-                        <p>Rural Estate Project</p>
+                        <h3>Farm Dam Conversion</h3>
+                        <p>Before</p>
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="farm">
-                    <img src="images/farmdamconversion (2).jpeg" alt="Farm Dam Conversion 1">
+                    <img src="images/farmdamconversion 2.jpeg" alt="Farm Dam Conversion ">
                     <div class="portfolio-overlay">
-                        <h3>Natural Swimming Pond</h3>
-                        <p>Eco-Friendly Design</p>
+                        <h3>Farm Dam Conversion</h3>
+                        <p>Before</p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="installation">
-                    <img src="images/poolinstallation (3).jpeg" alt="Farm Dam Conversion 1">
+                <div class="portfolio-item" data-category="farm">
+                    <img src="images/farmdamconversion 3.jpeg" alt="Farm Dam Conversion ">
                     <div class="portfolio-overlay">
-                        <h3>Infinity Edge Design</h3>
-                        <p>Luxury Home Pool</p>
+                        <h3>Farm Dam Conversion</h3>
+                        <p>After</p>
                     </div>
                 </div>
+                <div class="portfolio-item" data-category="farm">
+                    <img src="images/farmdamconversion 3.jpeg" alt="Farm Dam Conversion ">
+                    <div class="portfolio-overlay">
+                        <h3>Farm Dam Conversion</h3>
+                        <p>After</p>
+                    </div>
+                      
+                    
+                </div>
+                 <!-- Before Images -->
+                <div class="portfolio-item" data-category="regrout">
+                    <img src="images/regrout1.jpeg" alt="Pool Regrouting">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Regrouting</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="regrout">
+                    <img src="images/regrout2.jpeg" alt="Pool Regrouting">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Regrouting</h3>
+                        <p>Before</p>
+                    </div>
+                </div>
+                <!-- After Images -->
+                <div class="portfolio-item" data-category="regrout">
+                    <img src="images/regrout3.jpeg" alt="Pool Regrouting">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Regrouting</h3>
+                        <p>After</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="regrout">
+                    <img src="images/regrout4.jpeg" alt="Pool Regrouting">
+                    <div class="portfolio-overlay">
+                        <h3>Pool Regrouting</h3>
+                        <p>After</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
@@ -476,12 +646,10 @@
                 <div class="footer-links">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#services">Fiberglass Pools</a></li>
-                        <li><a href="#services">Pool Revamps</a></li>
-                        <li><a href="#services">Pumps & Filters</a></li>
-                        <li><a href="#services">Farm Dam Conversion</a></li>
-                        <li><a href="#services">Pool Regrouting</a></li>
-                        <li><a href="#services">Heating Systems</a></li>
+                        <li><a href="fiberglass-pools.html">Fiberglass Pool installation</a></li>
+                        <li><a href="revamps.html">Pool Revamps</a></li>
+                        <li><a href="farm-dam-conversion.html">Farm Dam Conversion</a></li>
+                        <li><a href="pool-regrouting.html">Pool Regrouting</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
