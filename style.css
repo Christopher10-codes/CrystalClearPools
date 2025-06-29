@@ -1148,7 +1148,19 @@ section {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
+@media (max-width: 992px) {
+    .dropdown-menu {
+        transition: 
+            max-height 0.3s ease-out,
+            opacity 0.2s ease-out,
+            padding 0.3s ease-out;
+    }
+    
+    /* Make sure links are easily tappable on mobile */
+    .dropdown-menu a {
+        padding: 12px 15px;
+    }
+}
 
 
 

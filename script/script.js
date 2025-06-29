@@ -120,27 +120,7 @@
             showTestimonial(0);
         }
 
-        // Form Submission
-        const quoteForm = document.getElementById('quoteForm');
-        if (quoteForm) {
-            quoteForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // Get form values
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const message = document.getElementById('message').value;
-                
-                // Here you would typically send the data to a server
-                // For this example, we'll just show an alert
-                alert(`Thank you, ${name}! Your quote request has been received. We'll contact you shortly at ${email} or ${phone}.`);
-                
-                // Reset the form
-                quoteForm.reset();
-            });
-        }
-
+       
         // Animation on Scroll
         function animateOnScroll() {
             const elements = document.querySelectorAll('.animate');
@@ -173,32 +153,39 @@
 
         // Check on scroll
         window.addEventListener('scroll', animateOnScroll);
-document.addEventListener('DOMContentLoaded', function() {
-    const servicesLink = document.querySelector('.dropdown-toggle');
+
+        document.addEventListener('DOMContentLoaded', function() {
+    // Get all necessary elements
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
     const dropdownMenu = document.querySelector('.dropdown-menu');
-    const isMobile = window.innerWidth <= 992; // Match your media query
-
-    servicesLink.addEventListener('click', function(e) {
-        if (isMobile) {
-            e.preventDefault(); // Stop the anchor jump on mobile
-            this.parentElement.classList.toggle('active'); // Toggle dropdown
-            
-            // Close when clicking a menu item
-            dropdownMenu.querySelectorAll('a').forEach(item => {
-                item.addEventListener('click', () => {
-                    this.parentElement.classList.remove('active');
-                });
-            });
+    const dropdownItems = dropdownMenu.querySelectorAll('a');
+    
+    // Close dropdown function
+    function closeDropdown() {
+        dropdownToggle.parentElement.classList.remove('active');
+    }
+    
+    // Toggle dropdown on click
+    dropdownToggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992) { // Mobile only
+            e.preventDefault();
+            this.parentElement.classList.toggle('active');
         }
-        // Desktop behavior remains unchanged
     });
-
+    
+    // Close dropdown when any item is clicked
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', closeDropdown);
+    });
+    
     // Close when clicking outside
     document.addEventListener('click', function(e) {
-        if (!servicesLink.contains(e.target) && !dropdownMenu.contains(e.target)) {
-            servicesLink.parentElement.classList.remove('active');
+        if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            closeDropdown();
         }
     });
 });
+
+
 
 
