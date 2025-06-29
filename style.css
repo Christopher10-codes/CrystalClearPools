@@ -236,7 +236,7 @@
     box-shadow: var(--shadow);
     border-radius: 5px;
     opacity: 0;
-    visibility: visible;
+    visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s ease;
     z-index: 1000;
@@ -272,8 +272,7 @@
     padding-left: 20px;
 }
 
-/* Mobile Dropdown Styles */
-/* Mobile Dropdown Styles */
+
 
 
         /* Hero Section */
