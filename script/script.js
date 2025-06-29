@@ -173,31 +173,32 @@
 
         // Check on scroll
         window.addEventListener('scroll', animateOnScroll);
+document.addEventListener('DOMContentLoaded', function() {
+    const servicesLink = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const isMobile = window.innerWidth <= 992; // Match your media query
 
-        // Mobile dropdown functionality
-document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', function(e) {
-        if (window.innerWidth <= 992) {
-            e.preventDefault();
-            const dropdown = this.parentElement;
-            dropdown.classList.toggle('active');
+    servicesLink.addEventListener('click', function(e) {
+        if (isMobile) {
+            e.preventDefault(); // Stop the anchor jump on mobile
+            this.parentElement.classList.toggle('active'); // Toggle dropdown
             
-            // Close other dropdowns
-            document.querySelectorAll('.dropdown').forEach(item => {
-                if (item !== dropdown) {
-                    item.classList.remove('active');
-                }
+            // Close when clicking a menu item
+            dropdownMenu.querySelectorAll('a').forEach(item => {
+                item.addEventListener('click', () => {
+                    this.parentElement.classList.remove('active');
+                });
             });
+        }
+        // Desktop behavior remains unchanged
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!servicesLink.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            servicesLink.parentElement.classList.remove('active');
         }
     });
 });
 
-// Close dropdowns when clicking elsewhere
-document.addEventListener('click', function(e) {
-    if (!e.target.closest('.dropdown') && window.innerWidth <= 992) {
-        document.querySelectorAll('.dropdown').forEach(dropdown => {
-            dropdown.classList.remove('active');
-        });
-    }
-});
 
