@@ -289,8 +289,6 @@
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
-            opacity: 0;
-            transform: translateY(20px);
         }
 
         
