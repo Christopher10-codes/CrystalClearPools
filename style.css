@@ -293,10 +293,7 @@
             transform: translateY(20px);
         }
 
-        .hero-content.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        
 
         .hero h1 {
             font-size: 3rem;
